@@ -15,7 +15,7 @@ async function createTable(){
     await sql`DROP TABLE IF EXISTS Team;`
     await sql`DROP TABLE IF EXISTS Redemption;`
     await sql`CREATE TABLE IF NOT EXISTS Team ( staff_pass_id varchar(255) PRIMARY KEY, team_name varchar(255), created_at varchar(255) );`;
-    await sql`CREATE TABLE IF NOT EXISTS Redemption ( team_name varchar(255) PRIMARY KEY, redemption_status BOOLEAN);`;
+    await sql`CREATE TABLE IF NOT EXISTS Redemption ( team_name varchar(255) PRIMARY KEY, redemption_status BOOLEAN, redeemed_at BIGINT);`;
     console.log('Table created successfully');
 }
 

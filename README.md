@@ -1,36 +1,34 @@
+# Gift Redemption Portal 🎁
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, install and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Frameworks and Testing
+This project uses the following frameworks and tools:
 
-To learn more about Next.js, take a look at the following resources:
+<b>Next.js</b>: The main framework for building the application 💻
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<b>Typescript</b>: For type-checking and enhanced developer experience 😁
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<b>Tailwind CSS</b>: For utility-first styling ✨
 
-## Deploy on Vercel
+<b>Jest</b>: For unit testing of 4 test cases 🧪
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Assumptions
+The portal serves solely for viewing whether the team has redeemed their gift. Updating the status will be initiated by clicking on the search bar again.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Deployment 
+The application has been hosted on Vercel, accessible [here](govtech-assessment-rxs6.vercel.app). However, due to existing bugs, it's recommended to view and debug the application locally on localhost instead.
