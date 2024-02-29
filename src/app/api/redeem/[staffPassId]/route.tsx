@@ -9,11 +9,11 @@ export async function POST(request: Request, { params }: any ): Promise<Response
   const staffPassId = params.staffPassId;
   // console.log(staffPassId)
   try{
-    console.log("AM I HERE")
+    // console.log("AM I HERE")
     const q = `SELECT team_name FROM Team WHERE staff_pass_id =  '${staffPassId}'`;
-    console.log(sql)
+    // console.log(sql)
     const result = await sql.query(q);
-    console.log("AM I HERE 2")
+    // console.log("AM I HERE 2")
     const teamName = result.rows[0]?.team_name;
     // console.log(teamName)
 
