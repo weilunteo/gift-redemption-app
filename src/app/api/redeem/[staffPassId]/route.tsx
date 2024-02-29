@@ -5,12 +5,15 @@
 import {sql} from '@vercel/postgres';
 import { NextResponse} from 'next/server';
 
-export async function POST(request: Request, { params}: any ): Promise<Response> {
+export async function POST(request: Request, { params }: any ): Promise<Response> {
   const staffPassId = params.staffPassId;
   // console.log(staffPassId)
   try{
+    console.log("AM I HERE")
     const q = `SELECT team_name FROM Team WHERE staff_pass_id =  '${staffPassId}'`;
+    console.log(sql)
     const result = await sql.query(q);
+    console.log("AM I HERE 2")
     const teamName = result.rows[0]?.team_name;
     // console.log(teamName)
 
@@ -33,6 +36,7 @@ export async function POST(request: Request, { params}: any ): Promise<Response>
     return NextResponse.json({message: `Team redemption for ${teamName} is still available`}, {status:200});
   }
   catch (error) {
+    console.log(error)
     return NextResponse.json({error}, {status:500});
   }
 

@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "ts-node -r dotenv/config ./src/app/scripts/seed.ts"
+    "seed": "ts-node -r dotenv/config ./src/app/scripts/seed.ts",
+    "test": "jest"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
+    "@types/jest": "^29.5.12",
     "@vercel/postgres": "^0.7.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
@@ -21,7 +23,8 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "ts-jest": "^29.1.2"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.23.3",
