@@ -2,6 +2,8 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![alt text](image.png)
+
 ## Getting Started
 
 First, install and run the development server:
@@ -11,23 +13,27 @@ npm install
 npm run dev
 ```
 
+Next, populate the database with the csv file given:
+
+```bash
+npm run seed
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Frameworks and Testing
-This project uses the following frameworks and tools:
+This project uses the following frameworks/libraries/tools:
 
-<b>Next.js</b>: The main framework for building the application 💻
-
-<b>Typescript</b>: For type-checking and enhanced developer experience 😁
-
-<b>Tailwind CSS</b>: For utility-first styling ✨
-
-<b>Jest</b>: For unit testing of 4 test cases 🧪
+- Framework: Next.js
+- Language: Typescript
+- Design: Tailwind CSS, Shadcn/UI, LottieFiles
+- Database: Vercel Postgres
+- Unit Testing: Jest
 
 ## Assumptions
-The portal serves solely for viewing whether the team has redeemed their gift. Updating the status will be initiated by clicking on the search bar again.
+The portal serves solely for viewing whether the team has redeemed their gift. Updating the redemption status will be initiated by clicking on the search bar again.
 
 
 ## Deployment 
