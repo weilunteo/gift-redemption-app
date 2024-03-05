@@ -18,16 +18,17 @@ export async function POST(request: Request, { params }: any ): Promise<Response
     // console.log(teamName)
 
     if (!teamName) {
-      return NextResponse.json({error: `Staff pass id ${staffPassId} not found`}, {status:404});
+      return NextResponse.json({error: `Staff pass ID (${staffPassId}) is not found.`}, {status:404});
     }
     
     const q2 = `SELECT redemption_status, redeemed_at FROM Redemption WHERE team_name = '${teamName}'`;
     const result2 = await sql.query(q2);
     const redeemed_at = result2.rows[0]?.redeemed_at;
+  
     // console.log(result2)
 
     if (result2.rows.length > 0) {
-      return NextResponse.json({error: `${teamName} has already redeemed the gifts at ${redeemed_at}`}, {status:409});
+      return NextResponse.json({error: `${teamName} has already redeemed the gifts at ${redeemed_at}.`}, {status:409});
     }
     else{
       const timestamp = Date.now();
@@ -35,7 +36,7 @@ export async function POST(request: Request, { params }: any ): Promise<Response
       await sql.query(q3);
     
     }
-    return NextResponse.json({message: `Team redemption for ${teamName} is still available`}, {status:200});
+    return NextResponse.json({message: `Team redemption for ${teamName} is still available.`}, {status:200});
   }
   catch (error) {
     console.log(error)
