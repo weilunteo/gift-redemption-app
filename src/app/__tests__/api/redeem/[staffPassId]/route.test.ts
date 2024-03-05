@@ -26,7 +26,7 @@ describe('redeemGift', () => {
         const response = await POST(request, {params});
         console.log(response)
         expect(response.status).toBe(404);
-        expect(await response.json()).toEqual({error: 'Staff pass id 123456 not found'});
+        expect(await response.json()).toEqual({error: 'Staff pass ID (123456) is not found'});
     }
     );
 
@@ -44,7 +44,7 @@ describe('redeemGift', () => {
 
         const response = await POST(request, {params});
         expect(response.status).toBe(409);
-        expect(await response.json()).toEqual({error: 'team1 has already redeemed'});
+        expect(await response.json()).toEqual({error: 'team1 has already redeemed the gifts at undefined'});
     }
     );
 
